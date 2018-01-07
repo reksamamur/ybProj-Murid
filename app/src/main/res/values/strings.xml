@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ybProj-Murid</string>
+    <string name="welcome">Please Fill the Form</string>
+
+    <string name="Soal_1">Kuliah diBinus enak?</string>
+    <string name="Soal_2">Dosennya pada Galak GK?</string>
+    <string name="Soal_3">Makanan Kantin Enak gk?</string>
+</resources>
