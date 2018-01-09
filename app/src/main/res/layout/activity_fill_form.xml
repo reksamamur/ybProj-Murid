@@ -28,60 +28,70 @@
                 android:textSize="18sp"
                 android:textColor="@color/white"
                 android:text="@string/welcome"/>
-            <EditText
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:padding="10dp"
-                android:background="@drawable/shape"
-                android:hint="CODE"/>
-            <EditText
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:padding="10dp"
-                android:hint="Name"
-                android:background="@drawable/shape"/>
-            <EditText
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/shape"
-                android:padding="10dp"
-                android:hint="Email"/>
-            <EditText
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/shape"
-                android:padding="10dp"
-                android:hint="Phone NUmber"/>
 
             <EditText
+                android:id="@+id/edt_code"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape"
+                android:hint="CODE"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:id="@+id/editText"
+                android:background="@drawable/shape"
+                android:hint="Name"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edt_mail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape"
+                android:hint="Email"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape"
+                android:hint="Phone NUmber"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edt_info"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/shape"
-                android:inputType="textMultiLine"
-                android:padding="10dp"
-                android:hint="information"
-                android:lines="8"
-                android:minLines="6"
                 android:gravity="top|left"
+                android:hint="information"
+                android:inputType="textMultiLine"
+                android:lines="8"
                 android:maxLines="10"
-                android:scrollbars="vertical"/>
+                android:minLines="6"
+                android:padding="10dp"
+                android:scrollbars="vertical" />
         </LinearLayout>
     </ScrollView>
+
     <android.support.v7.widget.AppCompatButton
-        android:layout_below="@+id/scroolnih"
+        android:id="@+id/btn_submit"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
+        android:layout_below="@+id/scroolnih"
         android:layout_margin="10dp"
+        android:background="@color/LoginActivity_btn_color"
+        android:radius="50dp"
         android:text="Submit"
         android:textAllCaps="false"
-        android:radius="50dp"
         android:textColor="@color/LoginActivity_txtbtn_signup_color"
-        android:textSize="20sp"
-        android:background="@color/LoginActivity_btn_color"/>
+        android:textSize="20sp" />
 </RelativeLayout>
