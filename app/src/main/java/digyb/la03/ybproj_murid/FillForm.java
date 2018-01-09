@@ -1,5 +1,6 @@
 package digyb.la03.ybproj_murid;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,57 +53,65 @@ public class FillForm extends AppCompatActivity {
         final String sPhone = phone.getText().toString().trim();
         final String sInfo = info.getText().toString().trim();
 
+        if(sName.isEmpty() || semail.isEmpty() || sPhone.isEmpty() || sInfo.isEmpty())
+        {
+            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+        }
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_MURID,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
+        else {
 
-                        //If we are getting success from server
-                        if (response.contains(Config.MURID_ISREG)) {
-//                            hideDialog();
-                            Toast.makeText(FillForm.this, "Data Added", Toast.LENGTH_SHORT).show();
-                            gotoMainActivity();
+            final ProgressDialog prog = ProgressDialog.show(FillForm.this,"","Loading....",true);
 
-                        } else {
-//                            hideDialog();
-                            //Displaying an error message on toast
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_MURID,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+
+                            //If we are getting success from server
+                            if (response.contains(Config.MURID_ISREG)) {
+                                prog.dismiss();
+                                Toast.makeText(FillForm.this, "Data Added", Toast.LENGTH_SHORT).show();
+                                gotoMainActivity();
+
+                            } else {
+                                prog.dismiss();
+                                //Displaying an error message on toast
 //                            Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_LONG).show();
-                            Toast.makeText(FillForm.this, response, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(FillForm.this, response, Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        //You can handle error here if you want
-//                        hideDialog();
-                        Toast.makeText(getApplicationContext(), "The server unreachable", Toast.LENGTH_LONG).show();
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            //You can handle error here if you want
+                            prog.dismiss();
+                            Toast.makeText(getApplicationContext(), "The server unreachable", Toast.LENGTH_LONG).show();
 
-                    }
-                }) {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                //Adding parameters to request
-                params.put(Config.MURID_NAME, sName);
-                params.put(Config.MURID_EMAIL, semail);
-                params.put(Config.MURID_TELP, sPhone);
-                params.put(Config.MURID_INFO, sInfo);
+                        }
+                    }) {
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String> params = new HashMap<>();
+                    //Adding parameters to request
+                    params.put(Config.MURID_NAME, sName);
+                    params.put(Config.MURID_EMAIL, semail);
+                    params.put(Config.MURID_TELP, sPhone);
+                    params.put(Config.MURID_INFO, sInfo);
 
-                //returning parameter
-                return params;
-            }
+                    //returning parameter
+                    return params;
+                }
 
 //        Intent intent = new Intent(SignupActivity.this, MainActivity.class);
 //        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 //        finish();
 //        startActivity(intent);
 
-        };
+            };
 
-        Volley.newRequestQueue(this).add(stringRequest);
-
+            Volley.newRequestQueue(this).add(stringRequest);
+        }
         //-------------------
     }
 

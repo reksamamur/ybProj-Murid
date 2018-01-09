@@ -47,6 +47,13 @@ public class codeCheck extends AppCompatActivity {
         //-----------------------------
 
         final String sKode = kode.getText().toString().trim();
+        
+        if (sKode.isEmpty())
+        {
+            Toast.makeText(this, "Please Fill Code Field", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
 
         final ProgressDialog prog = ProgressDialog.show(codeCheck.this,"","Loading....",true);
 
@@ -90,7 +97,7 @@ public class codeCheck extends AppCompatActivity {
 
         //Adding the string request to the queue
         Volley.newRequestQueue(this).add(stringRequest);
-
+        }
         //-----------------------------
     }
 
