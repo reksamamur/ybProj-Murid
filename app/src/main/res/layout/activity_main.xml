@@ -6,16 +6,39 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     tools:context="digyb.la03.ybproj_murid.MainActivity">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:textSize="20sp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Pilih 0 sampai 5"/>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/atasnih"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:id="@+id/text_atas"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih 0 sampai 5"/>
+                <android.support.v7.widget.RecyclerView
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/penampilsoal">
+                </android.support.v7.widget.RecyclerView>
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/submitTombol"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:radius="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/LoginActivity_txtbtn_signup_color"
+                    android:textSize="20sp"
+                    android:background="@color/LoginActivity_btn_color"/>
+        </LinearLayout>
 </RelativeLayout>

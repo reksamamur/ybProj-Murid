@@ -17,4 +17,5 @@
     <color name="LoginActivity_txtbtn_signup_color">#FFFFFF</color>
     <color name="LoginActivity_txtbtn_login_color">#2F373A</color>
     <color name="colorWhite">#D6D6D6</color>
+    <color name="biru">#0089E2</color>
 </resources>
