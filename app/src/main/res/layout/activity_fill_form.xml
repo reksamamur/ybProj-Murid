@@ -27,45 +27,51 @@
                 android:textSize="30sp"
                 android:textColor="@color/white"
                 android:text="@string/welcome"/>
-            <EditText
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:padding="10dp"
-                android:hint="Name"
-                android:inputType="text"
-                android:background="@drawable/shape"/>
-            <EditText
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/shape"
-                android:padding="10dp"
-                android:inputType="textEmailAddress"
-                android:hint="Email"/>
-            <EditText
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/shape"
-                android:padding="10dp"
-                android:inputType="number"
-                android:hint="Phone NUmber"/>
 
             <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:id="@+id/editText"
+                android:background="@drawable/shape"
+                android:hint="Name"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape"
+                android:hint="Phone NUmber"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edtInfo"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/shape"
-                android:inputType="textMultiLine"
-                android:padding="10dp"
-                android:hint="information"
-                android:lines="8"
-                android:minLines="6"
                 android:gravity="top|left"
+                android:hint="information"
+                android:inputType="textMultiLine"
+                android:lines="8"
                 android:maxLines="10"
-                android:scrollbars="vertical"/>
+                android:minLines="6"
+                android:padding="10dp"
+                android:scrollbars="vertical" />
 
             <android.support.v7.widget.AppCompatButton
                 android:layout_marginTop="20dp"
