@@ -13,12 +13,8 @@ public class Soals {
     public Soals(String terlihatsoals){
         this.setTerlihatsoals(terlihatsoals);
     }
-    private String terlihatsoals;
-    private boolean isSelected;
 
-    public boolean isSelected() {
-        return isSelected;
-    }
+    private String terlihatsoals;
 
     public String getTerlihatsoals() {
         return terlihatsoals;

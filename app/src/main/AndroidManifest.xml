@@ -12,8 +12,7 @@
         android:supportsRtl="true"
         android:name="android.support.multidex.MultiDexApplication"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:theme="@style/soalTheme">
+        <activity android:name=".codeCheck">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +21,9 @@
         </activity>
         <activity android:name=".FillForm" />
         <activity
-            android:name=".codeCheck"
-            android:theme="@style/soalTheme" />
-        <activity android:name=".ThankYou"></activity>
+            android:name=".MainActivity"
+            android:theme="@style/soalTheme"/>
+        <activity android:name=".ThankYou"/>
     </application>
 
 </manifest>
