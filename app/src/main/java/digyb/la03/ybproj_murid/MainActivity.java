@@ -72,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void SubmitTombol(){
         if (adapter.getItemId(pertanyaan.length) != -1){
+            Intent intent = new Intent(MainActivity.this, ThankYou.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }else{
             AlertDialog.Builder alertNih = new AlertDialog.Builder(MainActivity.this);
             alertNih.setTitle("Error");
             alertNih.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
@@ -81,10 +85,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
             alertNih.show();
-        }else{
-            Intent intent = new Intent(MainActivity.this, ThankYou.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
         }
     }
 }

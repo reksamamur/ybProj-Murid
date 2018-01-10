@@ -46,12 +46,12 @@ public class SoalsAdapter extends RecyclerView.Adapter<SoalsAdapter.SoalViewHold
     public void onBindViewHolder(SoalViewHolder holder, int position) {
         Soals so = soals.get(position);
         holder.terlihat_soal.setText(so.getTerlihatsoals());
-        holder.nol.setChecked(position == lastchecked);
-        holder.one.setChecked(position == lastchecked);
-        holder.two.setChecked(position == lastchecked);
-        holder.three.setChecked(position == lastchecked);
-        holder.four.setChecked(position == lastchecked);
-        holder.five.setChecked(position == lastchecked);
+        holder.nol.setChecked(so.isSelected());
+        holder.one.setChecked(so.isSelected());
+        holder.two.setChecked(so.isSelected());
+        holder.three.setChecked(so.isSelected());
+        holder.four.setChecked(so.isSelected());
+        holder.five.setChecked(so.isSelected());
     }
 
     @Override
