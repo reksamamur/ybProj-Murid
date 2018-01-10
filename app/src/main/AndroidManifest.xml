@@ -10,8 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name="android.support.multidex.MultiDexApplication"
         android:theme="@style/AppTheme">
-        <activity android:name=".codeCheck">
+        <activity android:name=".MainActivity"
+            android:theme="@style/soalTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +22,7 @@
         </activity>
         <activity android:name=".FillForm" />
         <activity
-            android:name=".MainActivity"
+            android:name=".codeCheck"
             android:theme="@style/soalTheme" />
         <activity android:name=".ThankYou"></activity>
     </application>

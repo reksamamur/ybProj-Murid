@@ -21,12 +21,12 @@ import butterknife.OnClick;
  */
 
 public class SoalsAdapter extends RecyclerView.Adapter<SoalsAdapter.SoalViewHolder> {
-    ArrayList<Soals> soals = new ArrayList<Soals>();
+    public static ArrayList<Soals> soals = new ArrayList<Soals>();
     int lastchecked = -1;
-    String[] questionsList;
+    //String[] questionsList;
     //Context context;
 
-    public SoalsAdapter(ArrayList<Soals> soals, String[] questionsList){
+    public SoalsAdapter(ArrayList<Soals> soals){
         //this.context = context;
         this.soals = soals;
         /*
@@ -57,6 +57,10 @@ public class SoalsAdapter extends RecyclerView.Adapter<SoalsAdapter.SoalViewHold
     @Override
     public int getItemCount() {
         return soals.size();
+    }
+
+    public int selectedPosition(){
+        return lastchecked;
     }
 
     public class SoalViewHolder extends RecyclerView.ViewHolder{
