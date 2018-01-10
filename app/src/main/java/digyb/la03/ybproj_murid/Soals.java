@@ -1,5 +1,7 @@
 package digyb.la03.ybproj_murid;
 
+import android.widget.RadioGroup;
+
 /**
  * Created by reksa on 08/01/2018.
  */
@@ -9,6 +11,7 @@ public class Soals {
         this.setTerlihatsoals(terlihatsoals);
     }
     private String terlihatsoals;
+    RadioGroup radioGroup;
 
     public String getTerlihatsoals() {
         return terlihatsoals;
