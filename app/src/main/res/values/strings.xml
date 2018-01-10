@@ -7,11 +7,18 @@
         <item>Dosennya pada Galak GK?</item>
         <item>Makanan Kantin Enak gk?</item>
         <item>Kamu Sehat?</item>
-        <item>Kamu Udah Makan?</item>
-        <item>Suka Bangun pagi gk kamu?</item>
-        <item>Kamu Mandi gk?</item>
-        <item>Nostalgia?</item>
-        <item>Mengerti?</item>
-        <item>Disaat kita bersamaaaaa</item>
+        <item>Kuliah diBinus enak?</item>
+        <item>Dosennya pada Galak GK?</item>
+        <item>Makanan Kantin Enak gk?</item>
+        <item>Kamu Sehat?</item>
+    </string-array>
+
+    <string-array name="jawab">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
     </string-array>
 </resources>

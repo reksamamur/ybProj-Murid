@@ -11,9 +11,7 @@
     card_view:cardBackgroundColor="@color/white"
     card_view:cardElevation="3dp"
     card_view:contentPadding="4dp"
-    android:foreground="?selectableItemBackground"
-    android:clickable="true"
-    android:focusable="true">
+    android:foreground="?selectableItemBackground">
 
     <LinearLayout
         android:orientation="vertical"
@@ -32,6 +30,7 @@
 
         <RadioGroup
             android:id="@+id/jawaban"
+            android:checkedButton="@+id/shape"
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_width="wrap_content"

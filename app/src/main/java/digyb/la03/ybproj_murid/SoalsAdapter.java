@@ -4,6 +4,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 public class SoalsAdapter extends RecyclerView.Adapter<SoalsAdapter.SoalViewHolder> {
     ArrayList<Soals> soals = new ArrayList<Soals>();
 
+    //private RadioGroup lastCheckedRadioGroup = null;
     public SoalsAdapter(ArrayList<Soals> soals){
         this.soals = soals;
     }
