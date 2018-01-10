@@ -1,6 +1,9 @@
 package digyb.la03.ybproj_murid;
 
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import butterknife.OnClick;
 
 /**
  * Created by reksa on 08/01/2018.
@@ -11,7 +14,11 @@ public class Soals {
         this.setTerlihatsoals(terlihatsoals);
     }
     private String terlihatsoals;
-    RadioGroup radioGroup;
+    private boolean isSelected;
+
+    public boolean isSelected() {
+        return isSelected;
+    }
 
     public String getTerlihatsoals() {
         return terlihatsoals;

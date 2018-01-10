@@ -5,12 +5,15 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.RadioButton;
 
 import java.util.ArrayList;
+
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -19,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Soals> list = new ArrayList<Soals>();
     String[] pertanyaan;
+
+    AppCompatButton appCompatButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
