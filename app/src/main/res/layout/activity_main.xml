@@ -30,9 +30,10 @@
                 </android.support.v7.widget.RecyclerView>
                 <android.support.v7.widget.AppCompatButton
                     android:id="@+id/submitTombol"
+                    android:onClick="SubmitTombol"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="Submit"
+                    android:text="@string/submit"
                     android:textAllCaps="false"
                     android:radius="50dp"
                     android:layout_alignParentBottom="true"

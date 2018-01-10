@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">ybProj-Murid</string>
     <string name="welcome">Please Fill the Form</string>
+    <string name="terima">Terima Kasih Telah Menjawab Questioner Ini</string>
+    <string name="close">Close</string>
+    <string name="submit">Submit</string>
 
     <string-array name="soal">
         <item>Kuliah diBinus enak?</item>
